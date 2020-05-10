@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ValidationComponent from './components/ValidationComp/ValidationComponent'
 import './App.css';
 
 class App extends Component {
@@ -7,7 +8,6 @@ class App extends Component {
   }
 
   handleChange = (event) => {
-   
     let text = {...this.state.text}
     text.text = event.target.value
     this.setState({
@@ -30,6 +30,7 @@ class App extends Component {
 
         <input type="text" onChange={this.handleChange}></input>
         <p>{this.state.text}</p>
+        <ValidationComponent tLength={this.state.text.length}/>
       </div>
     );
   }
