@@ -9,8 +9,8 @@ const CharComponent = props => {
     margin: "16px", 
     border: "1px solid black"}
   return(
-    <div style={style}>
-      <p>Some Text?</p>
+    <div style={style} onClick={props.onClick}>
+      <p>{props.letter}</p>
     </div>
   )
 }
